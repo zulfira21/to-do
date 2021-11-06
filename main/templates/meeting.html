@@ -11,8 +11,40 @@
     <p>Отобразите данные из предыдущего домашнего задания (упражнение
         2, урок 31) новом html-файле с именем meeting.html</p>
 
-        {% for tomeet in tomeet_list %}
-        {{ tomeet.person}}
-        {% endfor %}
+       
+       <section>
+        <div class="create_container">
+          <input
+          class="create_input" 
+          type="text"
+          placeholder="Напишите сюда новую задачу">
+          <button class="create_button">Добавить</button>
+        </div> 
+   
+        <div class="todo_container">
+
+           {% for tomeet in meeting_list %} 
+         <div class="todo_item">
+           <div class="todo_item_header">
+             <label class="checkbox_container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+             </label>
+             <h4>{{ tomeet.person }}</h4>
+           </div>
+   
+           <div class="todo_item_footer">
+             <p>{{ tomeet.phone_Number }}</p>
+             <div class="action_buttons">
+               <img src="icons/star_favorite_5754.png" alt="">
+               <img src="icons/1485477104-basket_78591.png" alt="">
+             </div>
+            </div>
+           
+           </div>
+           {% endfor%}
+          </div>
+     </section>  
+   
 </body>
 </html>
