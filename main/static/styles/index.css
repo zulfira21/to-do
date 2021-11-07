@@ -36,7 +36,7 @@ section{
 }
 
 .create_button:active{
-    border: 1px solid #761786;
+    border: 1px solid #ce93d8;
     box-shadow: 2px 2px 5px 3px #fce4ec;
 }
 
@@ -68,7 +68,7 @@ section{
 }
 
 .todo_item.done img{
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 .todo_item.marked{
@@ -98,7 +98,7 @@ section{
     font-family: sans-serif;
 }
 
-.todo_item_footer.action_buttons{
+.todo_item_footer .action_buttons{
     display: flex;
 }
 
