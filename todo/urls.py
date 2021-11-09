@@ -16,7 +16,7 @@ Including another URLconf
 from os import name
 from django.contrib import admin
 from django.urls import path
-from main.views import homepage,test,meeting,add_todo,add_tomeet
+from main.views import homepage,test,meeting,add_todo,add_tomeet,habits,add_habits
 from homework.views import homework,hw2
 from django.conf import settings
 from django.conf.urls.static import static
@@ -32,6 +32,8 @@ urlpatterns = [
     path('meeting',meeting,name='meeting'),
     path('add todo/',add_todo,name='add todo'),
     path('add-tomeet/',add_tomeet,name='add-tomeet'),
+    path('habits/',habits,name='habits'),
+    path('add-habits/',add_habits,name='add-habits'),
 ]   + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)\
     + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
