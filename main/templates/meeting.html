@@ -13,12 +13,8 @@
 
 </head>
 <body>
-    <h3>Домашнее задание № 32</h3>
-    <p>Отобразите данные из предыдущего домашнего задания (упражнение
-        2, урок 31) новом html-файле с именем meeting.html</p>
-
-       
-       <section>
+    <h3>Домашнее задание № 34</h3>
+   <section>
         <div class="create_container">
           <form action="{% url 'add-tomeet' %}" method="POST">
             {% csrf_token %}
@@ -47,7 +43,7 @@
              <p>{{ tomeet.phone_Number }}</p>
              <div class="action_buttons">
                <img src="{% static './icons/star_favorite_5754.png' %}" alt="">
-               <img src="{% static './icons/1485477104-basket_78591.png' %}" alt="">
+               <a href="{% url 'delete-tomeet' tomeet.id %}"><img src="{% static './icons/1485477104-basket_78591.png' %}" alt=""></a>
              </div>
             </div>
            

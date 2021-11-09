@@ -59,4 +59,7 @@ def mark_todo(request,id):
     todo.save()
     return redirect(test)
 
-    
+def delete_tomeet(request,id):
+    tomeet = ToMeet.objects.get(id=id)
+    tomeet.delete()
+    return redirect(meeting)    
