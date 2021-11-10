@@ -69,3 +69,10 @@ def mark_tomeet(request,id):
     tomeet.is_favorite = True
     tomeet.save()
     return redirect(meeting)
+
+def mark_undo_todo(request,id):
+    todo = ToDo.objects.get(id=id)
+    todo.is_favorite = False
+    todo.save()
+    return redirect(test)
+    

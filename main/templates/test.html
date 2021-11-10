@@ -48,6 +48,9 @@
              <p>{{ todo.created_at }}</p>
              <div class="action_buttons">
               {% if todo.is_favorite %}
+
+              <a href="{% url 'mark_undo-todo' todo.id %}"><img src="{% static './icons/istockphoto-1217555025-612x612.jpg' %}"></a>
+                   
               <a href="{% url 'mark-todo' todo.id %}"><img src="{% static './icons/istockphoto-1217555025-612x612.jpg' %}"></a>
               {% else %}
               <a href="{% url 'mark-todo' todo.id %}"><img src="{% static './icons/star_favorite_5754.png' %}"></a>
