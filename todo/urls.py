@@ -16,7 +16,7 @@ Including another URLconf
 from os import name
 from django.contrib import admin
 from django.urls import path
-from main.views import homepage,test,meeting,add_todo,add_tomeet,habits,add_habits,delete_todo,mark_todo,delete_tomeet,mark_tomeet,mark_undo_todo
+from main.views import homepage,test,meeting,add_todo,add_tomeet,habits,add_habits,delete_todo,mark_todo,delete_tomeet,mark_tomeet,mark_undo_todo,close_todo
 from homework.views import homework,hw2
 from django.conf import settings
 from django.conf.urls.static import static
@@ -39,6 +39,7 @@ urlpatterns = [
     path('delete-tomeet/<id>',delete_tomeet,name='delete-tomeet'),
     path('mark-tomeet/<id>',mark_tomeet,name='mark-tomeet'),
     path('mark_undo-todo/<id>',mark_undo_todo,name='mark_undo-todo'),
+    path('close-todo/<id>',close_todo,name='close-todo'),
 ]   + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)\
     + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 

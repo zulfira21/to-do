@@ -75,4 +75,10 @@ def mark_undo_todo(request,id):
     todo.is_favorite = False
     todo.save()
     return redirect(test)
+
+def close_todo(request,id):
+    todo =ToDo.objects.get(id=id)
+    todo.is_closed = not todo.is_closed
+    todo.save()
+    return redirect(test)
     
